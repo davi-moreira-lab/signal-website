@@ -1,0 +1,45 @@
+# Publishes the SIGNAL site to GitHub Pages. Only the allowlisted public files are deployed
+# (index.html, styles.css, assets/davi-moreira.jpg, .nojekyll); the repository's other files never are.
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the page is freshly rendered and passes the site tests
+        run: |
+          python3 tools/render_site.py --check
+          python3 -m unittest discover -s tests
+      - name: Collect only the allowlisted public files
+        run: |
+          mkdir -p _site/assets
+          cp index.html styles.css .nojekyll _site/
+          cp assets/davi-moreira.jpg _site/assets/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

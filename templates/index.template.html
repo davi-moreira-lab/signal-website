@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="{{meta_description}}">
+  <title>{{program}} | {{umbrella}}</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="logo" href="#top" aria-label="SIGNAL home"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle class="mark-ring" cx="20" cy="20" r="17.5"/><g class="mark-arcs"><path d="M33.41 8.75A17.5 17.5 0 0 1 33.41 31.25"/><path d="M6.59 8.75A17.5 17.5 0 0 0 6.59 31.25"/></g><g class="mark-arcs late"><path d="M33.41 8.75A17.5 17.5 0 0 1 33.41 31.25"/><path d="M6.59 8.75A17.5 17.5 0 0 0 6.59 31.25"/></g><g class="mark-arcs later"><path d="M33.41 8.75A17.5 17.5 0 0 1 33.41 31.25"/><path d="M6.59 8.75A17.5 17.5 0 0 0 6.59 31.25"/></g><circle class="mark-core" cx="20" cy="20" r="3"/></svg><span>{{program}}</span></a>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#method">Method</a><a href="#people">People</a><a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">A research program of the {{umbrella}}</p>
+          <h1 id="hero-title">{{headline}}</h1>
+          <p class="lede">{{subhead}}</p>
+          <div class="hero-buttons"><a class="primary-link" href="#research">Explore the research <span aria-hidden="true">↓</span></a><a class="text-link" href="#join">For Purdue Honors students <span aria-hidden="true">→</span></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="identity-bar" aria-label="Affiliation">
+      <div class="wrap identity-flex"><span>DIRECTOR <strong>{{director}}</strong></span><span>CURRENT AFFILIATION <strong>{{current_affiliation}}</strong></span><span>RESEARCH GENERATOR <strong>{{program_home}}</strong></span><span>UMBRELLA <strong>{{umbrella}}</strong></span></div>
+    </section>
+    <section class="section about-section" id="about">
+      <div class="wrap two-column"><div><p class="section-label">01 / THE PROGRAM</p><h2>Research that puts evidence first.</h2></div><div><p>{{about}}</p><p class="small-note">Studies with human participants, such as the planned survey experiments, begin only after the required Purdue IRB review. Each project follows Purdue's research, data and custody requirements; institutional affiliation does not imply endorsement.</p></div></div>
+    </section>
+    <section class="section research-section" id="research">
+      <div class="wrap"><div class="section-heading"><div><p class="section-label">02 / RESEARCH</p><h2>Three lines of work open SIGNAL.</h2></div><p>Each line is built on free public text.</p></div>
+        <div class="theme-grid">
+          <article class="theme-card"><span class="theme-number">01</span><h3>Voice and Institutional Response</h3><p>Which issue frames actually get agencies and companies to respond, and does the framing that wins a response also move public trust? Students code public comments from Regulations.gov and consumer complaint narratives from the Consumer Financial Protection Bureau.</p><span class="card-rule" aria-hidden="true"></span></article>
+          <article class="theme-card"><span class="theme-number">02</span><h3>Disclosure Events and Market Response</h3><p>Does the wording of a corporate disclosure carry information beyond its facts? Students analyze SEC filings against short-window market returns and report association, not causation. A shared, preregistered survey experiment will test whether wording shifts perceived investment risk.</p><span class="card-rule" aria-hidden="true"></span></article>
+          <article class="theme-card"><span class="theme-number">03</span><h3>Health Claims and Consumer Behavior</h3><p>How do health and wellness marketing claims persuade? Students code the claims documented in FDA warning letters. A shared survey experiment will test whether claim wording changes perceived credibility and purchase intention when the product facts stay the same.</p><span class="card-rule" aria-hidden="true"></span></article>
+        </div>
+      </div>
+    </section>
+    <section class="section projects-section" id="method"><div class="wrap two-column"><div><p class="section-label">03 / METHOD</p><h2>Every study, five review gates.</h2></div><div><p>Every SIGNAL study passes five review gates: question, design, measurement, analysis and interpretation. Each study produces a codebook or event protocol, a reproducible notebook, a poster and a research note, and its results are presented at Purdue Office of Undergraduate Research and Honors College venues.</p><p>The method is taught in HONR 46400, Evidence-Driven Research, and in the open manual <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/"><em>EDR|AI: Evidence-Driven Research in the Age of AI</em></a>.</p><div class="coming-soon"><span class="status-dot" aria-hidden="true"></span> Completed research notes and posters will be listed here, with each student's permission</div></div></div></section>
+    <section class="section people-section" id="people"><div class="wrap"><p class="section-label">04 / PEOPLE</p><h2>People behind the research.</h2><div class="person-card"><img class="person-photo" src="./assets/davi-moreira.jpg" alt="Portrait of Dr. Davi Moreira" width="96" height="96"><div><h3>{{director}}</h3><p>Director, SIGNAL · {{umbrella}}</p><p class="affiliation">{{director_title}}</p></div></div><p class="small-note">Faculty affiliates and student researchers will be listed once each has confirmed and agreed to be featured.</p></div></section>
+    <section class="section research-section" id="join"><div class="wrap two-column"><div><p class="section-label">05 / JOIN</p><h2>For Purdue Honors students.</h2></div><div><p>SIGNAL works with ten to fifteen Purdue Honors students a year, from any major, who fulfill their John Martinson Honors College Scholarly Project by joining its research team.</p><p>{{join_contact}}</p></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div><strong class="footer-brand"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle class="mark-ring" cx="20" cy="20" r="17.5"/><g class="mark-arcs"><path d="M33.41 8.75A17.5 17.5 0 0 1 33.41 31.25"/><path d="M6.59 8.75A17.5 17.5 0 0 0 6.59 31.25"/></g><g class="mark-arcs late"><path d="M33.41 8.75A17.5 17.5 0 0 1 33.41 31.25"/><path d="M6.59 8.75A17.5 17.5 0 0 0 6.59 31.25"/></g><g class="mark-arcs later"><path d="M33.41 8.75A17.5 17.5 0 0 1 33.41 31.25"/><path d="M6.59 8.75A17.5 17.5 0 0 0 6.59 31.25"/></g><circle class="mark-core" cx="20" cy="20" r="3"/></svg><span>{{program}}</span></strong><p>A research program of {{umbrella}}.</p><p>An Interdisciplinary Research Generator of the John Martinson Honors College, Purdue University, AY 2026–2028.</p></div><div><p>{{copyright_year}} · {{umbrella}}</p><p>Institutional affiliations do not imply endorsement or ownership of every research project.</p></div></div></footer>
+</body>
+</html>
